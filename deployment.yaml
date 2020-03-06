@@ -1,0 +1,34 @@
+apiVersion: extensions/v1beta1 # https://qiita.com/yoshis2/items/e600ec7ec3b67224f2b0
+kind: Deployment
+metadata:
+  name: xem-core
+spec:
+  selector:
+    matchLabels:
+      app: xem-core
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: xem-core
+        service: xem-core
+    spec:
+      containers:
+      - name: xem
+        image: xem-core:v0.6.97
+        resources:
+          limits:
+            cpu: "6"
+          requests:
+            cpu: "4"
+        volumeMounts:
+          - name: xem-data
+            mountPath: /root/nem
+      restartPolicy: Always
+      volumes:
+        - name: xem-data
+          azureDisk:
+            kind: Managed
+            diskName: xem
+            diskURI: リソースID
+
