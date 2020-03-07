@@ -12,4 +12,4 @@
 [Nem Catapult](http://explorer-xym.nemtech.network/)
 
 ## Build method
-docker build --build-arg RIPPLE_VERSION=1.4.0 -t xrp-node:v1.4.0 -f Dockerfile .
+docker build --build-arg NIS_VERSION=0.6.97 --build-arg NIS_XMS=96G --build-arg NIS_XMX=96G -t xem-core:v0.6.97 -f Dockerfile .
