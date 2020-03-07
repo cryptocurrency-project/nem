@@ -8,7 +8,7 @@
 [nem nis API](https://i-yusuke.com/entry/nem-nis-api-document-japanese/)
 
 ## Nem Explorer
-[nemtool](https://explorer.nemtool.com/#/)
+[nemtool](https://explorer.nemtool.com/)
 [Nem Catapult](http://explorer-xym.nemtech.network/)
 
 ## Build method
